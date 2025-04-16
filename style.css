@@ -32,10 +32,10 @@ img {
 /* Interactive Hotspots */
 .hotspot {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
-    background: #E63946;
+    background: rgba(255, 182, 193, 0.6); /* Light pink with low opacity */
     cursor: pointer;
     animation: pulse 2.5s infinite;
     transition: transform 0.3s ease;
@@ -58,11 +58,14 @@ img {
     left: 50%;
     transform: translateX(-50%);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    visibility: hidden; /* Hide tooltip */
+    transition: opacity 0.3s ease, visibility 0s 0.3s; /* Delay visibility change */
 }
 
 .hotspot:hover::after {
-    opacity: 1;
+    opacity: 1; /* Show tooltip */
+    visibility: visible; /* Make tooltip visible */
+    transition: opacity 0.3s ease, visibility 0s 0s; /* Immediate visibility */
 }
 
 /* Pulse Animation */
