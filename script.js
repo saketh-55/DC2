@@ -3,7 +3,10 @@ const paintingData = {
     Ravan: {
         title: "Ravan",
         description: "Ravana in the Pabu epic is often viewed as a counter-protagonist. Over time, due to Sanskritization, this character is sometimes identified with the Demon King of the Ramayana. However, historical sources suggest that Ravana in the Pabu narrative may have been a local ruler, not the same as the one from Valmiki's Ramayana. Some accounts point to him being a neighboring king from Mandore, near Jodhpur. This interpretation aligns with regional legends and local histories, offering a distinct cultural perspective on the rivalry between Pabu and Ravana.",
-        audio: "Ravan.mp3"
+        audio: "Ravan.mp3",
+        music: "Music_4.mp3",
+        musicLabel: "Special Ravana Music"
+
     },
     Umarkot: {
         title: "Umarkot Sodan",
@@ -13,7 +16,10 @@ const paintingData = {
     Pabuji: {
         title: "Pabuji",
         description: "Pabu (or Pabu Ji, with the respectful suffix \"-ji\" commonly used in India), a semi-mythical prince born around 1239 AD in Kolumand near Phalodi (Jodhpur), is remembered not for his rule but for his devotion to protecting animals, especially livestock. The son of King Buro and a celestial nymph, his story blends history, myth, and spirituality. As ruler of Kolumand, Pabuji was renowned for his care for animals, a value cherished by Rajasthan’s pastoral communities. His ultimate sacrifice to defend his kingdom’s livestock is said to have elevated him to divine status. Pabuji is celebrated as a protector deity, particularly by those who depend on cattle and camels. His legacy reflects Rajasthan’s values of loyalty, sacrifice, and harmony with nature, securing his place as an enduring symbol of protection and reverence.",
-        audio: "pabuji.mp3"
+        audio: "pabuji.mp3",
+        music: "Music_2.mp3",
+        musicLabel: "Special Pabuji Music"
+
     },
     Ramdev: {
         title: "Ramdev",
@@ -44,7 +50,7 @@ const paintingData = {
         title: "Roopnath",
         description: "Roop (or Roop Nath, because of his affiliation with yogic practices), is Pabu’s nephew, the son of Pabu's brother, Buro, and his wife, Gailovat. After a fierce battle between the Kichis and Pabu's army, Roop is the only one left alive, hiding during his childhood to survive as the last of his family and lineage. Driven by a strong sense of duty and revenge, Roop dedicates himself to avenging his uncle Pabu and the entire family. His story is one of survival, honor, and the endurance of lineage, where the need to uphold family legacy intertwines with themes of justice and devotion.",
         audio: "Roopnath.mp3",
-        music: "Music_roop.mp3",
+        music: "Music_1.mp3",
         musicLabel: "Special Roopnath Music"
     },
     Bhati: {
@@ -55,7 +61,9 @@ const paintingData = {
     Mirza: {
         title: "Mirza Khan",
         description: "Mirza Khan, the ruler of Patan, serves as a key antagonist in Pabuji's tales. Representing oppressive forces, he is portrayed as a tyrant responsible for cow slaughter but also as someone who upholds honor by pursuing blood-feuds (vair). His conflict with Pabu reflects themes of justice, moral leadership, and the protection of women and livestock, core values in Pabuji's legend. In a moment of redemption, Mirza Khan bathes in the sacred lake of Pushkar to cleanse himself of the sins of bloodshed, adding complexity to his character.",
-        audio: "Mirza.mp3"
+        audio: "Mirza.mp3",
+        music: "Music_3.mp3",
+        musicLabel: "Special Mirza Khan Music"
     },
     Gujao: {
         title: "The Gujao's Well",
@@ -76,8 +84,6 @@ const paintingData = {
         title: "Kesar Kalmi",
         description: "Kesar Kalmi, Pabuji’s celestial mother, is a divine nymph who takes on various forms throughout his story. She appears as a human, a tigress, and ultimately as an elegant Marwari mare when Pabu reaches young adulthood. In her equine form, she becomes his loyal companion, guiding and protecting him through his adventures. Even in their final battle against the Khinchis, Kesar Kalmi safeguards her son, ensuring his transcendence to the celestial realm after his mortal end. Her transformations symbolize unwavering maternal devotion and the divine bond between mother and child.",
         audio: "Kesar.mp3",
-        music: "Music_Kesar.mp3",
-        musicLabel: "Special Kesar Music"
     },
     Harmal_Jogi: {
         title: "Harmal Jogi",
@@ -88,8 +94,6 @@ const paintingData = {
         title: "Pabuji's Wedding",
         description: "Pabuji was initially reluctant to marry, as his primary focus was on protecting cattle and his adventures. However, when the King of Umarkot in Sindh proposed a marriage to Pabu on behalf of his daughter, Phulvanti, Pabu reluctantly agreed. The princess had fallen in love with Pabu, and despite his reservations, he eventually accepted the proposal. However, he delayed the journey by demanding saffron to dye the clothes of his wedding procession, which sparked a war with Lakkhu Pathan, the saffron owner. After the battle, Pabu set off for Umarkot, but Deval, whom he had promised to protect, tried to convince him to stay or leave some men behind. Pabu, however, insisted that he would come immediately if she needed him, even during the wedding. As they journeyed, ominous signs, including a tiger killed by Dhebo, appeared, but they continued to Umarkot, where preparations for the wedding were underway. Just before the ceremony, Deval arrived in the form of a bird, bringing the news that Khinchi had stolen her cattle, setting the stage for further conflict.",
         audio: "Wedding.mp3",
-        music: "Music_wedding.mp3",
-        musicLabel: "Special Wedding Music"
     }
 };
 
