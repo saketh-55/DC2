@@ -43,7 +43,9 @@ const paintingData = {
     Roopnath: {
         title: "Roopnath",
         description: "Roop (or Roop Nath, because of his affiliation with yogic practices), is Pabu’s nephew, the son of Pabu's brother, Buro, and his wife, Gailovat. After a fierce battle between the Kichis and Pabu's army, Roop is the only one left alive, hiding during his childhood to survive as the last of his family and lineage. Driven by a strong sense of duty and revenge, Roop dedicates himself to avenging his uncle Pabu and the entire family. His story is one of survival, honor, and the endurance of lineage, where the need to uphold family legacy intertwines with themes of justice and devotion.",
-        audio: "Roopnath.mp3"
+        audio: "Roopnath.mp3",
+        music: "Music_roop.mp3",
+        musicLabel: "Special Roopnath Music"
     },
     Bhati: {
         title: "Bhati Court",
@@ -73,7 +75,9 @@ const paintingData = {
     Kesar: {
         title: "Kesar Kalmi",
         description: "Kesar Kalmi, Pabuji’s celestial mother, is a divine nymph who takes on various forms throughout his story. She appears as a human, a tigress, and ultimately as an elegant Marwari mare when Pabu reaches young adulthood. In her equine form, she becomes his loyal companion, guiding and protecting him through his adventures. Even in their final battle against the Khinchis, Kesar Kalmi safeguards her son, ensuring his transcendence to the celestial realm after his mortal end. Her transformations symbolize unwavering maternal devotion and the divine bond between mother and child.",
-        audio: "Kesar.mp3"
+        audio: "Kesar.mp3",
+        music: "Music_Kesar.mp3",
+        musicLabel: "Special Kesar Music"
     },
     Harmal_Jogi: {
         title: "Harmal Jogi",
@@ -83,7 +87,9 @@ const paintingData = {
     Wedding: {
         title: "Pabuji's Wedding",
         description: "Pabuji was initially reluctant to marry, as his primary focus was on protecting cattle and his adventures. However, when the King of Umarkot in Sindh proposed a marriage to Pabu on behalf of his daughter, Phulvanti, Pabu reluctantly agreed. The princess had fallen in love with Pabu, and despite his reservations, he eventually accepted the proposal. However, he delayed the journey by demanding saffron to dye the clothes of his wedding procession, which sparked a war with Lakkhu Pathan, the saffron owner. After the battle, Pabu set off for Umarkot, but Deval, whom he had promised to protect, tried to convince him to stay or leave some men behind. Pabu, however, insisted that he would come immediately if she needed him, even during the wedding. As they journeyed, ominous signs, including a tiger killed by Dhebo, appeared, but they continued to Umarkot, where preparations for the wedding were underway. Just before the ceremony, Deval arrived in the form of a bird, bringing the news that Khinchi had stolen her cattle, setting the stage for further conflict.",
-        audio: "Wedding.mp3"
+        audio: "Wedding.mp3",
+        music: "Music_wedding.mp3",
+        musicLabel: "Special Wedding Music"
     }
 };
 
@@ -93,13 +99,31 @@ function showPopup(component) {
     const title = document.getElementById('popup-title');
     const description = document.getElementById('popup-description');
     const audio = document.getElementById('popup-audio');
+    const musicContainer = document.getElementById('popup-music-container');
 
-    const { title: compTitle, description: compDescription, audio: compAudio } = paintingData[component];
+    const data = paintingData[component];
 
-    title.textContent = compTitle;
-    description.textContent = compDescription;
-    audio.src = compAudio;
+    // Set main content
+    title.textContent = data.title;
+    description.textContent = data.description;
+    audio.src = data.audio;
     audio.load();
+
+    // Clear any previous music content
+    musicContainer.innerHTML = '';
+
+    // If music exists (only for Kesar), add the heading and audio
+    if (data.music) {
+        const label = document.createElement('p');
+        label.innerHTML = `<strong>${data.musicLabel || "Special Music"}:</strong>`;
+
+        const specialMusic = document.createElement('audio');
+        specialMusic.setAttribute('controls', '');
+        specialMusic.src = data.music;
+
+        musicContainer.appendChild(label);
+        musicContainer.appendChild(specialMusic);
+    }
 
     popup.style.display = 'flex';
 }
